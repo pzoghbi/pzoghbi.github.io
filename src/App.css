@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+.App-Frame {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#App-Slideshow {
+    top: 0;
+    height: 100%;
+    position: relative;
+    transition: top 2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Slide {
+    text-align: center;
+    font-size: 2.5em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.25s ease-in-out;
+    font-family: 'San Francisco Pro';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Slide:not(.active) {
+    opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#Slide-2.active {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active .jsSlideDown {
+    animation: slideDown 1s forwards .5s;
+}
+
+.active .jsSlideUp {
+    top: 20px;
+    animation: slideUp 1s forwards .5s;
+}
+
+@keyframes slideDown {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'San Francisco Pro';
+    src: local('San Francisco Pro Display Ultra Light'), local('San-Francisco-Pro-Display-Ultra-Light'),
+        url('fonts/SFProDisplay-Ultralight.woff2') format('woff2'),
+        url('fonts/SFProDisplay-Ultralight.woff') format('woff'),
+        url('fonts/SFProDisplay-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+.colorize { animation: colorize 0.369s infinite; }
+
+@keyframes colorize
+{
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: red; }
+}
+
+#Slide-Landing
+{
+    background-color: deepskyblue;
+    color: white;
+}
+
+#Slide-Landing span {
+    position: relative;
+    opacity: 0;
+}
+
+.Instructions
+{
+    font-size: 1em;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    padding: 3em 0;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 35%);
+}
+
+.Swipe-arrow
+{
+    top: -.25em;
+    position: relative;
+    font-size: 3em;
+    animation: upAndDown 2s ease-in-out infinite;
+    margin-bottom: .25em;
+}
+
+@keyframes upAndDown
+{
+    0% { top: -.25em; }
+    50% { top: .25em }
+    100% { top: -.25em; }
+}
+
+.jsFadeIn
+{
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
