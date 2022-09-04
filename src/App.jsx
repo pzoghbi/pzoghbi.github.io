@@ -57,18 +57,16 @@ function App() {
         let slidesElem = document.getElementsByClassName('Slide');
         instructionsDiv = document.getElementById('Instructions');
         slideCount = slidesElem.length;
-        [...slidesElem].map((elem, i) => {
-            observer.observe(elem);
-        })
+        [...slidesElem].map((elem) => { observer.observe(elem); });
     }, []);
 
     return (
         <div className="App">
-            <div className='App-Frame'>
-                <div id="App-Slideshow" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <div className='App-Frame' onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+                <div id="App-Slideshow">
                     <div className="Slide" id="Slide-Landing">
                         <p>
-                            <span className='jsSlideDown'>Achieve </span>
+                            <span className='jsSlideDown'>Achieve</span>&nbsp;
                             more<br />
                             with<span className='jsSlideUp'> less</span>.
                         </p>
@@ -88,7 +86,7 @@ function App() {
                     </div>
                     <div className="Slide">
                         <p>
-                            Improving both<br />good and great<br />software is now<br />my specialty.
+                            Enhancing<br />good and great<br />software is now<br />my specialty.
                         </p>
                     </div>
                     <div className="Slide">
