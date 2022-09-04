@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 let options = {
     root: document.getElementById('App-Frame'),
@@ -17,15 +16,26 @@ let observer = new IntersectionObserver((entries) => {
     });
 }, options)
 
-let slideCount = 0
-let slideIndex = 0
-let touchY = (null)
-let swipeMinDistance = 50
+let instructionsDiv = (null);
+let slideCount = 0;
+let slideIndex = 0;
+let touchY = (null);
+let swipeMinDistance = 50;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const slideshowScroll = () => {
     document.getElementById("App-Slideshow").style.top = '-' + (100 * slideIndex) + 'vh';
+    
+    instructionsDiv.style.opacity = 1;
+
+    if (slideIndex == 0) {
+        instructionsDiv.classList.add('FirstSlide')
+    } else if (slideIndex < slideCount - 1){
+        instructionsDiv.classList.remove('FirstSlide')
+    } else {
+        instructionsDiv.style.opacity = 0;
+    }
 }
 
 const onTouchStart = (e) => { touchY = e.touches[0].clientY };
@@ -45,6 +55,7 @@ const onTouchEnd = (e) => {
 function App() {
     useEffect(() => {
         let slidesElem = document.getElementsByClassName('Slide');
+        instructionsDiv = document.getElementById('Instructions');
         slideCount = slidesElem.length;
         [...slidesElem].map((elem, i) => {
             observer.observe(elem);
@@ -90,7 +101,7 @@ function App() {
 
                 </div>
 
-                <div className="Instructions">
+                <div id="Instructions" className='FirstSlide'>
                     <span className='Swipe-arrow'>︽</span>
                     <span id="Tooltip">Swipe up</span>
                 </div>
