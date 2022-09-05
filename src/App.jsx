@@ -1,5 +1,6 @@
 import './App.css';
 import { useEffect } from 'react';
+import wreath from './svg/wreath.svg'
 
 let options = {
     root: document.getElementById('App-Frame'),
@@ -83,6 +84,9 @@ function App() {
                 onWheel={onWheel}>
                 <div id="App-Slideshow">
                     <div className="Slide" id="Slide-Landing">
+                        <div className="wreath">
+                            <img id="wreath" src={wreath} alt="" />
+                        </div>
                         <p>
                             <span className='jsSlideDown'>Achieve </span>
                             more
@@ -131,21 +135,25 @@ function App() {
                     </div>
                     <div className="Slide">
                         <p>
-                            Are you hiring for
-                            <br />
-                            these positions?
-
-                            <br /><br />
                             <small>
-                                product designer
+                                Are you hiring for
                                 <br />
-                                web developer
+                                these positions?
                                 <br />
-                                consultant
+                                <br />
+                                <br />
+                                PRODUCT DESIGNER
+                                <br />
+                                WEB DEVELOPER
+                                <br />
+                                CONSULTATNT
                             </small>
-
-                            <br /><br />
+                            <br />
+                            <br />
+                            <br />
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
+                            <br />
+                            <a id="Resume" href="https://ufile.io/zugox63t" target="_blank" rel="noreferrer">or get my resume</a>
                         </p>
                     </div>
                     {/* <div className="Slide">
