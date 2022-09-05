@@ -37,6 +37,16 @@ const slideshowScroll = () => {
     }
 }
 
+const onWheel = (e) => {
+    if (e.deltaY > 0) {
+        slideIndex = clamp(slideIndex + 1, 0, slideCount - 1);
+    } else {
+        slideIndex = clamp(slideIndex - 1, 0, slideCount - 1);
+    }
+    
+    slideshowScroll();
+    console.log(e)
+}
 const onTouchStart = (e) => { touchY = e.touches[0].clientY };
 const onTouchEnd = (e) => {
     let changedTouchY = e.changedTouches[0].clientY;
@@ -61,7 +71,10 @@ function App() {
 
     return (
         <div className="App">
-            <div className='App-Frame' onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <div className='App-Frame' 
+                onTouchStart={onTouchStart} 
+                onTouchEnd={onTouchEnd} 
+                onWheel={onWheel}>
                 <div id="App-Slideshow">
                     <div className="Slide" id="Slide-Landing">
                         <p>
@@ -125,8 +138,22 @@ function App() {
                             </small>
 
                             <br /><br />
-                            <a id="Contact" href="mailto:phillip.zoghby@gmail.com">Contact me</a>
+                            <a id="Contact" href="tel:+385957421130">Contact me</a>
                         </p>
+                    </div>
+                    <div className="Slide">
+                        {/* <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="877d0ead-7a53-400e-9d0b-e27045f4b17d" />
+
+                        <input type="text" name="name" required />
+                        <input type="email" name="email" required />
+                        <textarea name="message" required></textarea>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
+                        <button type="submit">Submit Form</button>
+
+                        </form> */}
                     </div>
                 </div>
 
