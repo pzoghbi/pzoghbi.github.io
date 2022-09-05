@@ -138,11 +138,11 @@ function App() {
                             </small>
 
                             <br /><br />
-                            <a id="Contact" href="tel:+385957421130">Contact me</a>
+                            <a id="Contact" href="https://wa.me/385957421130">Contact me</a>
                         </p>
                     </div>
-                    <div className="Slide">
-                        {/* <form action="https://api.web3forms.com/submit" method="POST">
+                    {/* <div className="Slide">
+                        <form action="https://api.web3forms.com/submit" method="POST">
 
                         <input type="hidden" name="access_key" value="877d0ead-7a53-400e-9d0b-e27045f4b17d" />
 
@@ -153,8 +153,8 @@ function App() {
 
                         <button type="submit">Submit Form</button>
 
-                        </form> */}
-                    </div>
+                        </form>
+                    </div> */}
                 </div>
 
                 <div id="Instructions" className='FirstSlide'>
