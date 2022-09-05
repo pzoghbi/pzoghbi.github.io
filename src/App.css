@@ -176,7 +176,7 @@ small
 
 .active #Contact
 {
-    animation: shake 2s infinite 3s alternate;
+    /* animation: shake 2s infinite 3s alternate; */
 }
 
 @keyframes shake {
