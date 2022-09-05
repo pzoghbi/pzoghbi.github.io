@@ -40,7 +40,7 @@ const slideshowScroll = () => {
 let canScroll = true;
 const onWheel = (e) => {
     if (!canScroll) return;
-    
+
     canScroll = false;
 
     if (e.deltaY > 0) {
@@ -49,8 +49,8 @@ const onWheel = (e) => {
         slideIndex = clamp(slideIndex - 1, 0, slideCount - 1);
     }
 
-    setInterval(() => {canScroll = true}, 2000);
-    
+    setInterval(() => { canScroll = true }, 2000);
+
     slideshowScroll();
 }
 const onTouchStart = (e) => { touchY = e.touches[0].clientY };
@@ -77,15 +77,16 @@ function App() {
 
     return (
         <div className="App">
-            <div className='App-Frame' 
-                onTouchStart={onTouchStart} 
-                onTouchEnd={onTouchEnd} 
+            <div className='App-Frame'
+                onTouchStart={onTouchStart}
+                onTouchEnd={onTouchEnd}
                 onWheel={onWheel}>
                 <div id="App-Slideshow">
                     <div className="Slide" id="Slide-Landing">
                         <p>
                             <span className='jsSlideDown'>Achieve </span>
-                            more<br />
+                            more
+                            <br />
                             with<span className='jsSlideUp'> less</span>.
                         </p>
                     </div>
@@ -100,11 +101,11 @@ function App() {
                     <div className="Slide">
                         <p>
                             I've created
-                            <br /> 
+                            <br />
                             countless apps,
-                            <br /> 
+                            <br />
                             tools, and games
-                            <br /> 
+                            <br />
                             over the last
                             <br />
                             10+ years.
@@ -114,11 +115,11 @@ function App() {
                         <p>
                             {/* Enhancing<br />good and great<br />software is now<br />my specialty. */}
                             My specialty is
-                            <br/>
+                            <br />
                             to make great
-                            <br/> 
+                            <br />
                             software even
-                            <br/>
+                            <br />
                             greater.
                         </p>
                     </div>
@@ -131,7 +132,7 @@ function App() {
                     <div className="Slide">
                         <p>
                             Are you hiring for
-                            <br/>
+                            <br />
                             these positions?
 
                             <br /><br />
@@ -142,7 +143,7 @@ function App() {
                                 <br />
                                 consultant
                             </small>
-                            
+
                             <br /><br />
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
                         </p>

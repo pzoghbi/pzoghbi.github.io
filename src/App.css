@@ -40,9 +40,6 @@ small
     opacity: 0;
 }
 
-#Slide-2.active {
-}
-
 .active .jsSlideDown {
     animation: slideDown 1s forwards .5s;
 }
@@ -172,6 +169,7 @@ small
     border-radius: 12px;
     font-size: .7em !important;
     position: relative;
+    display: inline-block;
 }
 
 .active #Contact
