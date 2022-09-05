@@ -33,7 +33,7 @@ html, .App {
 
 small 
 {
-    font-variant: small-caps;
+    font-size: .7em;
 }
 
 .Slide:not(.active) {
@@ -168,12 +168,11 @@ small
     color: white;
     text-decoration: none;
     padding: 0.5em;
-    background-image: linear-gradient(45deg, crimson, red);
+    background-color: crimson;
     border-radius: 12px;
     font-size: .8em !important;
     position: relative;
     animation: shake 1s infinite 3s;
-    box-shadow: 3px 3px 11px black;
 }
 
 @keyframes shake {
