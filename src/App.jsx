@@ -37,15 +37,21 @@ const slideshowScroll = () => {
     }
 }
 
+let canScroll = true;
 const onWheel = (e) => {
+    if (!canScroll) return;
+    
+    canScroll = false;
+
     if (e.deltaY > 0) {
         slideIndex = clamp(slideIndex + 1, 0, slideCount - 1);
     } else {
         slideIndex = clamp(slideIndex - 1, 0, slideCount - 1);
     }
+
+    setInterval(() => {canScroll = true}, 2000);
     
     slideshowScroll();
-    console.log(e)
 }
 const onTouchStart = (e) => { touchY = e.touches[0].clientY };
 const onTouchEnd = (e) => {
@@ -138,7 +144,7 @@ function App() {
                             </small>
                             
                             <br /><br />
-                            <a id="Contact" href="https://wa.me/385957421130">Contact me</a>
+                            <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
                         </p>
                     </div>
                     {/* <div className="Slide">

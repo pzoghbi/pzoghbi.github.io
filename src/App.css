@@ -166,7 +166,6 @@ small
 {
     z-index: 999;
     text-decoration: none;
-    display: inline-block;
     color: white;
     padding: 0.5em;
     background-color: crimson;
@@ -177,7 +176,7 @@ small
 
 .active #Contact
 {
-    /* animation: shake 2s infinite 3s alternate; */
+    animation: shake 2s infinite 3s alternate;
 }
 
 @keyframes shake {
