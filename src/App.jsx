@@ -138,7 +138,7 @@ function App() {
                             </small>
                             
                             <br /><br />
-                            <a id="Contact" href="https://wa.me/385957421130" target="_self">Contact me</a>
+                            <a id="Contact" href="https://wa.me/385957421130">Contact me</a>
                         </p>
                     </div>
                     {/* <div className="Slide">

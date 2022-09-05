@@ -164,6 +164,7 @@ small
 
 #Contact, #Contact:link, #Contact:visited
 {
+    z-index: 999;
     text-decoration: none;
     display: inline-block;
     color: white;
