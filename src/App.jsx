@@ -25,12 +25,12 @@ const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const slideshowScroll = () => {
     document.getElementById("App-Slideshow").style.top = '-' + (100 * slideIndex) + 'vh';
-    
+
     instructionsDiv.style.opacity = 1;
 
-    if (slideIndex == 0) {
+    if (slideIndex === 0) {
         instructionsDiv.classList.add('FirstSlide')
-    } else if (slideIndex < slideCount - 1){
+    } else if (slideIndex < slideCount - 1) {
         instructionsDiv.classList.remove('FirstSlide')
     } else {
         instructionsDiv.style.opacity = 0;
@@ -56,7 +56,7 @@ function App() {
         let slidesElem = document.getElementsByClassName('Slide');
         instructionsDiv = document.getElementById('Instructions');
         slideCount = slidesElem.length;
-        [...slidesElem].map((elem) => { observer.observe(elem); });
+        [...slidesElem].forEach((elem) => { observer.observe(elem); });
     }, []);
 
     return (
@@ -80,22 +80,54 @@ function App() {
                     </div>
                     <div className="Slide">
                         <p>
-                            I've created<br /> countless apps,<br /> tools, and games<br /> over the last<br />10+ years.
+                            I've created
+                            <br /> 
+                            countless apps,
+                            <br /> 
+                            tools, and games
+                            <br /> 
+                            over the last
+                            <br />
+                            10+ years.
                         </p>
                     </div>
                     <div className="Slide">
                         <p>
-                            Enhancing<br />good and great<br />software is now<br />my specialty.
-                        </p>
-                    </div>
-                    <div className="Slide">
-                        <p>
-                            Take a step in<br />the right direction.
+                            {/* Enhancing<br />good and great<br />software is now<br />my specialty. */}
+                            My specialty is
                             <br/>
-                            <span className='jsFadeIn'>One decision will<br />get you there.</span>
+                            to make great
+                            <br/> 
+                            software even
+                            <br/>
+                            greater.
                         </p>
                     </div>
+                    <div className="Slide">
+                        <p>
+                            Let's work<br /> together.
+                            <br />
+                        </p>
+                    </div>
+                    <div className="Slide">
+                        <p>
+                            Are you hiring for
+                            <br/>
+                            these positions?
 
+                            <br /><br />
+                            <small>
+                                product designer
+                                <br />
+                                web developer
+                                <br />
+                                consultant
+                            </small>
+
+                            <br /><br />
+                            <a id="Contact" href="mailto:phillip.zoghby@gmail.com">Contact me</a>
+                        </p>
+                    </div>
                 </div>
 
                 <div id="Instructions" className='FirstSlide'>
