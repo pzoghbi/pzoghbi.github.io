@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
 html, .App {
     height: 100%;
     width: 100%;
@@ -25,7 +27,7 @@ html, .App {
     justify-content: center;
     align-items: center;
     transition: all 1.25s ease-in-out;
-    font-family: 'San Francisco Pro';
+    font-family: 'Roboto', sans-serif;
 }
 
 .Slide:not(.active) {

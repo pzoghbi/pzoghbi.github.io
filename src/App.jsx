@@ -65,7 +65,7 @@ function App() {
                 <div id="App-Slideshow">
                     <div className="Slide" id="Slide-Landing">
                         <p>
-                            <span className='jsSlideDown'>Achieve</span>&nbsp;
+                            <span className='jsSlideDown'>Achieve </span>
                             more<br />
                             with<span className='jsSlideUp'> less</span>.
                         </p>
