@@ -40,11 +40,11 @@ small {
     opacity: 0;
 }
 
-.active .jsSlideDown {
+.active .SlideDown {
     animation: slideDown 1s forwards .5s;
 }
 
-.active .jsSlideUp {
+.active .SlideUp {
     top: 20px;
     animation: slideUp 1s forwards .5s;
 }
@@ -130,6 +130,7 @@ small {
     flex-direction: column;
     justify-content: center;
     transition: all 1s ease-in;
+    animation: fadeIn 5s ease-in;
 }
 
 .FadeInWithDelay {
@@ -282,4 +283,45 @@ small {
 .CTA {
     font-size: .7em;
     max-width: 80%;
+}
+
+.Cascade > div
+{
+    position: relative;
+    top: 3em;
+}
+
+.active .Cascade > div 
+{
+    top: 0;
+}
+
+.FXSlideDelay1
+{
+    transition: top .4s ease; 
+}
+
+.FXSlideDelay2
+{
+    transition: top .6s ease; 
+}
+
+.FXSlideDelay3
+{
+    transition: top 1s ease; 
+}
+
+.FXSlideDelay4
+{
+    transition: top 1.8s ease; 
+}
+
+.FXSlideDelay5
+{
+    transition: top 3.4s ease; 
+}
+
+.active .FXScaleUp
+{
+    animation: FxScaleUp 3s forwards 2s;
 }

@@ -89,58 +89,45 @@ function App() {
                             <img id="wreath" src={wreath} alt="" />
                         </div>
                         <p>
-                            <span className='jsSlideDown'>Achieve </span>
+                            <span className='SlideDown'>Achieve </span>
                             more
                             <br />
-                            with<span className='jsSlideUp'> less</span>.
+                            with<span className='SlideUp'> less</span>.
                         </p>
                     </div>
-                    <div className="Slide" id="Slide-2">
+                    <div className="Slide">
+                        <div>Get inspired</div>
+                        <div>and take your</div>
+                        <div>business to</div>
+                        <div>the next level.</div>
+
+                        <br />
+
+                        <div className='FadeInWithDelay'>
+                            <div>One decision will</div>
+                            <div>get you there.</div>
+                        </div>
+                    </div>
+                    <div className="Slide">
                         <div>Hello. I'm Phillip.</div>
                         <div className='FadeInWithDelay'>
                             I make <span className='colorize'> software</span>.
                         </div>
                     </div>
                     <div className="Slide">
-                        <p>
-                            Get inspired
-                            <br />
-                            and take your
-                            <br />
-                            business to
-                            <br />
-                            the next level.
-                        </p>
-                        <div className='FadeInWithDelay'>
-                            One decision will
-                            <br />
-                            get you there.
+                        <div className="Cascade">
+                            <div className="FXSlideDelay1">I've created</div>
+                            <div className="FXSlideDelay2">countless apps,</div>
+                            <div className="FXSlideDelay3">tools, and games</div>
+                            <div className="FXSlideDelay4">over the last</div>
+                            <div className="FXSlideDelay5">10+ years.</div>
                         </div>
                     </div>
                     <div className="Slide">
-                        <p>
-                            I've created
-                            <br />
-                            countless apps,
-                            <br />
-                            tools, and games
-                            <br />
-                            over the last
-                            <br />
-                            10+ years.
-                        </p>
-                    </div>
-                    <div className="Slide">
-                        <p>
-                            {/* Enhancing<br />good and great<br />software is now<br />my specialty. */}
-                            My specialty is
-                            <br />
-                            to make great
-                            <br />
-                            software even
-                            <br />
-                            greater.
-                        </p>
+                        <div>My specialty is</div>
+                        <div>to make <strong>great</strong></div>
+                        <div>software even</div>
+                        <div><strong>greater</strong>.</div>
                     </div>
                     <div className="Slide">
                         <p>
@@ -148,44 +135,30 @@ function App() {
                         </p>
                     </div>
                     <div className="Slide">
-                            <div className="CTA">
-                                Are you hiring for
-                                these positions?
+                        <div className="CTA">
+                            Are you hiring for
+                            these positions?
 
-                                <h5 className='Small-Margin-Bottom'>PRODUCT DESIGNER</h5>
-                                <small>or a person who thinks they're in charge</small>
-                                
-                                <h5 className='Small-Margin-Bottom'>WEB DEVELOPER</h5>
-                                <small>
-                                    or a person who doesn't sleep until the code works
-                                </small>
+                            <h5 className='Small-Margin-Bottom'>PRODUCT DESIGNER</h5>
+                            <small>or a person who thinks they're in charge</small>
 
-                                <h5 className='Small-Margin-Bottom'>CONSULTANT</h5>
-                                <small>
-                                    or a person who ignores their advice (when they shouldn't)
-                                </small>
-                            </div>
-                            <br />
-                            <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
-                            <a id="Resume" href={`https://pzoghbi.github.io/${cv}`} target="_blank" rel="noreferrer">(or get my resume)</a>
+                            <h5 className='Small-Margin-Bottom'>WEB DEVELOPER</h5>
+                            <small>
+                                or a person who doesn't sleep until the code works
+                            </small>
+                            
+                            <h5 className='Small-Margin-Bottom'>APPRENTICE CONSULTANT (SaaS)</h5>
+                            <small>
+                                or a person who accompanies you in a long-term journey
+                            </small>
+                        </div>
+                        <br />
+                        <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
+                        <a id="Resume" href={`https://pzoghbi.github.io/${cv}`} target="_blank" rel="noreferrer">(or get my resume)</a>
                     </div>
-                    {/* <div className="Slide">
-                        <form action="https://api.web3forms.com/submit" method="POST">
-
-                        <input type="hidden" name="access_key" value="877d0ead-7a53-400e-9d0b-e27045f4b17d" />
-
-                        <input type="text" name="name" required />
-                        <input type="email" name="email" required />
-                        <textarea name="message" required></textarea>
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success" />
-
-                        <button type="submit">Submit Form</button>
-
-                        </form>
-                    </div> */}
                 </div>
 
-                <div id="Instructions" className='FirstSlide FadeInWithDelay'>
+                <div id="Instructions" className='FirstSlide'>
                     <span className='Swipe-arrow'>︽</span>
                     <span id="Tooltip">Swipe up</span>
                 </div>
