@@ -162,7 +162,7 @@ function App() {
 
                                 <h5 className='Small-Margin-Bottom'>CONSULTANT</h5>
                                 <small>
-                                    or a person who doesn't listen to their advice (when they should)
+                                    or a person who ignores their advice (when they shouldn't)
                                 </small>
                             </div>
                             <br />
