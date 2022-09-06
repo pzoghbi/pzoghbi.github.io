@@ -320,8 +320,3 @@ small {
 {
     transition: top 3.4s ease; 
 }
-
-.active .FXScaleUp
-{
-    animation: FxScaleUp 3s forwards 2s;
-}

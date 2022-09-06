@@ -147,7 +147,7 @@ function App() {
                                 or a person who doesn't sleep until the code works
                             </small>
                             
-                            <h5 className='Small-Margin-Bottom'>APPRENTICE CONSULTANT (SaaS)</h5>
+                            <h5 className='Small-Margin-Bottom'>APPRENTICE CONSULTANT</h5>
                             <small>
                                 or a person who accompanies you in a long-term journey
                             </small>
