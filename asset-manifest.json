@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.3acbf3e1.css",
-    "main.js": "/static/js/main.cab61955.js",
+    "main.css": "/static/css/main.50fc43c0.css",
+    "main.js": "/static/js/main.e6351b41.js",
     "static/js/787.68763dd6.chunk.js": "/static/js/787.68763dd6.chunk.js",
     "static/media/Phillip Zoghbi CV resume zivotopis 2022.pdf": "/static/media/Phillip Zoghbi CV resume zivotopis 2022.99daac93246575d31f25.pdf",
     "static/media/wreath.svg": "/static/media/wreath.2ac560dc7ddec43c347433eb8adcc5f7.svg",
     "index.html": "/index.html",
-    "main.3acbf3e1.css.map": "/static/css/main.3acbf3e1.css.map",
-    "main.cab61955.js.map": "/static/js/main.cab61955.js.map",
+    "main.50fc43c0.css.map": "/static/css/main.50fc43c0.css.map",
+    "main.e6351b41.js.map": "/static/js/main.e6351b41.js.map",
     "787.68763dd6.chunk.js.map": "/static/js/787.68763dd6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3acbf3e1.css",
-    "static/js/main.cab61955.js"
+    "static/css/main.50fc43c0.css",
+    "static/js/main.e6351b41.js"
   ]
 }
