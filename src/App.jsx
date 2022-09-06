@@ -155,6 +155,7 @@ function App() {
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
                             <br />
                             <a id="Resume" href={cv} target="_blank" rel="noreferrer">or get my resume</a>
+                            <br/>
                         </p>
                     </div>
                     {/* <div className="Slide">

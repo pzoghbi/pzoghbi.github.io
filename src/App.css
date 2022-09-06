@@ -270,6 +270,7 @@ small {
 }
 
 #Resume {
+    z-index: 999;
     font-size: 1.1rem;
     display: inline-block;
 }
