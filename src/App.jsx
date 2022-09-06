@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect } from 'react';
-import wreath from './svg/wreath.svg'
+import wreath from './svg/wreath.svg';
+import cv from './files/Phillip Zoghbi CV resume zivotopis 2022.pdf';
 
 let options = {
     root: document.getElementById('App-Frame'),
@@ -153,7 +154,7 @@ function App() {
                             <br />
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
                             <br />
-                            <a id="Resume" href="https://ufile.io/zugox63t" target="_blank" rel="noreferrer">or get my resume</a>
+                            <a id="Resume" href={cv} target="_blank" rel="noreferrer">or get my resume</a>
                         </p>
                     </div>
                     {/* <div className="Slide">
