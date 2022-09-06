@@ -142,14 +142,12 @@ function App() {
                                 these positions?
                                 <br />
                                 <br />
-                                <br />
                                 PRODUCT DESIGNER
                                 <br />
                                 WEB DEVELOPER
                                 <br />
                                 CONSULTATNT
                             </small>
-                            <br />
                             <br />
                             <br />
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
