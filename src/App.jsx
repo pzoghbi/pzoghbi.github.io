@@ -26,7 +26,7 @@ let swipeMinDistance = 50;
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const slideshowScroll = () => {
-    document.getElementById("App-Slideshow").style.top = '-' + (100 * slideIndex) + 'vh';
+    document.getElementById("App-Slideshow").style.top = '-' + (100 * slideIndex) + '%';
 
     instructionsDiv.style.opacity = 1;
 
@@ -185,7 +185,7 @@ function App() {
                     </div> */}
                 </div>
 
-                <div id="Instructions" className='FirstSlide'>
+                <div id="Instructions" className='FirstSlide FadeInWithDelay'>
                     <span className='Swipe-arrow'>︽</span>
                     <span id="Tooltip">Swipe up</span>
                 </div>

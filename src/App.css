@@ -22,7 +22,7 @@ html,
 
 .Slide {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.25em;
     height: 100%;
     display: flex;
     flex-direction: column;
