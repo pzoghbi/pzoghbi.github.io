@@ -96,12 +96,26 @@ function App() {
                         </p>
                     </div>
                     <div className="Slide" id="Slide-2">
-                        Hello. I'm Phillip.
+                        <div>Hello. I'm Phillip.</div>
+                        <div className='FadeInWithDelay'>
+                            I make <span className='colorize'> software</span>.
+                        </div>
                     </div>
                     <div className="Slide">
                         <p>
-                            I make <span className='colorize'> software</span>.
+                            Get inspired
+                            <br />
+                            and take your
+                            <br />
+                            business to
+                            <br />
+                            the next level.
                         </p>
+                        <div className='FadeInWithDelay'>
+                            One decision will
+                            <br />
+                            get you there.
+                        </div>
                     </div>
                     <div className="Slide">
                         <p>
@@ -131,30 +145,29 @@ function App() {
                     <div className="Slide">
                         <p>
                             Let's work<br /> together.
-                            <br />
                         </p>
                     </div>
                     <div className="Slide">
-                        <p>
-                            <small>
+                            <div className="CTA">
                                 Are you hiring for
-                                <br />
                                 these positions?
-                                <br />
-                                <br />
-                                PRODUCT DESIGNER
-                                <br />
-                                WEB DEVELOPER
-                                <br />
-                                CONSULTATNT
-                            </small>
-                            <br />
+
+                                <h5 className='Small-Margin-Bottom'>PRODUCT DESIGNER</h5>
+                                <small>or a person who thinks they're in charge</small>
+                                
+                                <h5 className='Small-Margin-Bottom'>WEB DEVELOPER</h5>
+                                <small>
+                                    or a person who doesn't sleep until the code works
+                                </small>
+
+                                <h5 className='Small-Margin-Bottom'>CONSULTANT</h5>
+                                <small>
+                                    or a person who doesn't listen to their advice (when they should)
+                                </small>
+                            </div>
                             <br />
                             <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
-                            <br />
-                            <a id="Resume" href={`https://pzoghbi.github.io/${cv}`} target="_blank" rel="noreferrer">or get my resume</a>
-                            <br/>
-                        </p>
+                            <a id="Resume" href={`https://pzoghbi.github.io/${cv}`} target="_blank" rel="noreferrer">(or get my resume)</a>
                     </div>
                     {/* <div className="Slide">
                         <form action="https://api.web3forms.com/submit" method="POST">

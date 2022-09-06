@@ -25,7 +25,7 @@ html,
     font-size: 2.5em;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 1.25s ease-in-out;
@@ -73,16 +73,6 @@ small {
     }
 }
 
-@font-face {
-    font-family: 'San Francisco Pro';
-    src: local('San Francisco Pro Display Ultra Light'), local('San-Francisco-Pro-Display-Ultra-Light'),
-        url('fonts/SFProDisplay-Ultralight.woff2') format('woff2'),
-        url('fonts/SFProDisplay-Ultralight.woff') format('woff'),
-        url('fonts/SFProDisplay-Ultralight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
 .colorize {
     animation: colorize 0.693s infinite;
 }
@@ -124,6 +114,10 @@ small {
     opacity: 0;
 }
 
+#Instructions.FirstSlide {
+    color: white !important;
+}
+
 #Instructions {
     color: black;
     font-size: 1em;
@@ -136,11 +130,15 @@ small {
     flex-direction: column;
     justify-content: center;
     transition: all 1s ease-in;
-    /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 35%); */
 }
 
-#Instructions.FirstSlide {
-    color: white !important;
+.FadeInWithDelay {
+    opacity: 0;
+    transition: opacity 1s ease-in-out 1.2s;
+}
+
+.active .FadeInWithDelay {
+    opacity: 1;
 }
 
 .Swipe-arrow {
@@ -266,7 +264,7 @@ small {
 }
 
 .active #wreath {
-    opacity: 0.18;
+    opacity: 0.21;
 }
 
 #Resume {
@@ -274,4 +272,14 @@ small {
     font-size: 1.1rem;
     display: inline-block;
     position: relative;
+    margin: 1em;
+}
+
+.Small-Margin-Bottom {
+    margin-bottom: 4px;
+}
+
+.CTA {
+    font-size: .7em;
+    max-width: 80%;
 }
