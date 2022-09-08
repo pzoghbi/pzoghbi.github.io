@@ -21,7 +21,7 @@ let instructionsDiv = (null);
 let slideCount = 0;
 let slideIndex = 0;
 let touchY = (null);
-let swipeMinDistance = 50;
+let swipeMinDistance = 30;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
@@ -51,7 +51,7 @@ const onWheel = (e) => {
         slideIndex = clamp(slideIndex - 1, 0, slideCount - 1);
     }
 
-    setInterval(() => { canScroll = true }, 2000);
+    setTimeout(() => { canScroll = true }, 2000);
 
     slideshowScroll();
 }
