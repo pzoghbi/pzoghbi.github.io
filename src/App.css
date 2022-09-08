@@ -296,27 +296,31 @@ small {
     top: 0;
 }
 
-.FXSlideDelay1
+.FXSlideDelay1 { transition: top .3s ease; }
+.FXSlideDelay2 { transition: top .4s ease; }
+.FXSlideDelay3 { transition: top .6s ease; }
+.FXSlideDelay4 { transition: top 1s ease; }
+.FXSlideDelay5 { transition: top 1.8s ease; }
+
+#CarouselFrame
 {
-    transition: top .4s ease; 
+    overflow: hidden;  
+    width: 100%; 
+    height: max-content;
+    margin: 1em auto;
 }
 
-.FXSlideDelay2
+#Carousel
 {
-    transition: top .6s ease; 
+    position: relative;
+    transition: top 1s ease-in-out;
 }
 
-.FXSlideDelay3
+.CarouselSlide
 {
-    transition: top 1s ease; 
-}
-
-.FXSlideDelay4
-{
-    transition: top 1.8s ease; 
-}
-
-.FXSlideDelay5
-{
-    transition: top 3.4s ease; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

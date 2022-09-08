@@ -69,12 +69,45 @@ const onTouchEnd = (e) => {
     slideshowScroll();
 };
 
+const resizeCarousel = () => {
+    let carouselFrame = document.getElementById('CarouselFrame');
+    let carouselSlides = document.getElementsByClassName('CarouselSlide');
+    let tallestSlide = carouselSlides[0];
+
+    // Store tallest element
+    [...carouselSlides].forEach(el => {
+        if (el.offsetHeight >= tallestSlide.offsetHeight) {
+            tallestSlide = el;
+        }
+    });
+
+    // Match height of all elements to tallest
+    [...carouselSlides].forEach(el => {
+        el.style.height = tallestSlide.offsetHeight + 'px';
+    });
+
+    carouselFrame.style.height = tallestSlide.offsetHeight + 'px';
+}
+
+const startCarousel = () => {
+    let carouselIndex = 0;
+    setInterval(() => {
+        let carousel = document.getElementById('Carousel');
+        let carouselFrame = document.getElementById('CarouselFrame');
+        let slides = document.getElementsByClassName('CarouselSlide');
+        carouselIndex = (++carouselIndex) % slides.length;
+        carousel.style.top = -(carouselIndex * carouselFrame.offsetHeight) + 'px';
+    }, 5000)
+}
+
 function App() {
     useEffect(() => {
         let slidesElem = document.getElementsByClassName('Slide');
         instructionsDiv = document.getElementById('Instructions');
         slideCount = slidesElem.length;
         [...slidesElem].forEach((elem) => { observer.observe(elem); });
+        resizeCarousel();
+        startCarousel();
     }, []);
 
     return (
@@ -136,21 +169,26 @@ function App() {
                     </div>
                     <div className="Slide">
                         <div className="CTA">
-                            Are you hiring for
+                            Hiring for
                             these positions?
+                            <div id="CarouselFrame">
+                                <div id="Carousel">
+                                    <div className="CarouselSlide">
+                                        <h5 className='Small-Margin-Bottom'>PRODUCT DESIGNER</h5>
+                                        <small>or a person who thinks they're in charge</small>
+                                    </div>
 
-                            <h5 className='Small-Margin-Bottom'>PRODUCT DESIGNER</h5>
-                            <small>or a person who thinks they're in charge</small>
-
-                            <h5 className='Small-Margin-Bottom'>WEB DEVELOPER</h5>
-                            <small>
-                                or a person who doesn't sleep until the code works
-                            </small>
-                            
-                            <h5 className='Small-Margin-Bottom'>APPRENTICE CONSULTANT</h5>
-                            <small>
-                                or a person who accompanies you in a long-term journey
-                            </small>
+                                    <div className="CarouselSlide">
+                                        <h5 className='Small-Margin-Bottom'>WEB DEVELOPER</h5>
+                                        <small>or a person who doesn't sleep until the code works</small>
+                                    </div>
+                                    
+                                    <div className="CarouselSlide">
+                                        <h5 className='Small-Margin-Bottom'>APPRENTICE CONSULTANT</h5>
+                                        <small>or a person who accompanies you in a long-term journey</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <br />
                         <a id="Contact" href="https://wa.me/385957421130" target="_blank" rel="noreferrer">Contact me</a>
