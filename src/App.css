@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
 
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html,
 .App {
     height: 100%;
@@ -17,7 +24,7 @@ html,
     top: 0;
     height: 100%;
     position: relative;
-    transition: top 1.81s ease;
+    transition: top 1s ease;
 }
 
 .Slide {
@@ -135,7 +142,7 @@ small {
 
 .FadeInWithDelay {
     opacity: 0;
-    transition: opacity 1s ease-in-out 1.2s;
+    transition: opacity 1s ease-in-out .25s;
 }
 
 .active .FadeInWithDelay {
@@ -143,24 +150,24 @@ small {
 }
 
 .Swipe-arrow {
-    top: -.25em;
+    top: -.2em;
     position: relative;
     font-size: 3em;
-    animation: upAndDown 2s ease-in-out infinite;
+    animation: upAndDown 1.5s ease-in-out infinite;
     margin-bottom: .25em;
 }
 
 @keyframes upAndDown {
     0% {
-        top: -.25em;
+        top: -.2em;
     }
 
     50% {
-        top: .25em
+        top: .2em
     }
 
     100% {
-        top: -.25em;
+        top: -.2em;
     }
 }
 
@@ -179,16 +186,21 @@ small {
     }
 }
 
-* {
-    user-select: none;
-    ;
+a {
+    text-decoration: none;
+    margin: 1em auto;
+    color: black;
+    transition: color 0.1s linear;
+}
+
+a:hover {
+    color: crimson;
 }
 
 #Contact,
 #Contact:link,
 #Contact:visited {
     z-index: 999;
-    text-decoration: none;
     color: white;
     padding: 0.5em;
     background-color: crimson;
@@ -282,45 +294,80 @@ small {
 
 .CTA {
     font-size: .7em;
+}
+
+.text {
+    font-size: .7em;
     max-width: 80%;
 }
 
-.Cascade > div
-{
+.Cascade>div {
     position: relative;
     top: 3em;
 }
 
-.active .Cascade > div 
-{
+.active .Cascade>div {
     top: 0;
 }
 
-.FXSlideDelay1 { transition: top .3s ease; }
-.FXSlideDelay2 { transition: top .4s ease; }
-.FXSlideDelay3 { transition: top .6s ease; }
-.FXSlideDelay4 { transition: top 1s ease; }
-.FXSlideDelay5 { transition: top 1.8s ease; }
+.FXSlideDelay1 {
+    transition: top .3s ease;
+}
 
-#CarouselFrame
-{
-    overflow: hidden;  
-    width: 100%; 
+.FXSlideDelay2 {
+    transition: top .4s ease;
+}
+
+.FXSlideDelay3 {
+    transition: top .6s ease;
+}
+
+.FXSlideDelay4 {
+    transition: top 1s ease;
+}
+
+.FXSlideDelay5 {
+    transition: top 1.8s ease;
+}
+
+#CarouselFrame {
+    overflow: hidden;
+    width: 100%;
     height: max-content;
     margin: 1em auto;
 }
 
-#Carousel
-{
+#Carousel {
     position: relative;
     transition: top 1s ease-in-out;
 }
 
-.CarouselSlide
-{
+.CarouselSlide {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.my-3 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.navigation {
+    content: "";
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-clicked
+{
+
 }
